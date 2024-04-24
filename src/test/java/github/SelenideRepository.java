@@ -14,20 +14,5 @@ public class SelenideRepository {
         $("#query-builder-test").setValue("selenide").pressEnter();
         $$("[data-testid='results-list']").first().$("a").click();
         $("#repository-container-header").shouldHave(text("selenide / selenide"));
-
-
-
-
-
-
-        //нажимаем на линк от первого результата поиска
-        //check:в заголовке selenide/selenide
-        //sleep(40000);
-        //ARRANGE - подготовка
-        //ACT - действие
-        //ACT - действие
-        //ACT - действие
-        //ACT - действие
-        //ASSERT - проверяем результаты
     }
 }
