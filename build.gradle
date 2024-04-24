@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+java{
+    toolchain{
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+compileTestJava{
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    //Selenide
+    testImplementation ('com.codeborne:selenide:7.2.3')
+    testRuntimeOnly('org.slf4j:slf4j-simple:2.0.13')
+
+    //JUnit 5
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.10.2')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.10.2')
+}
+
+test{
+    useJUnitPlatform()
+}
