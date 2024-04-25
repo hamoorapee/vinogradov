@@ -11,6 +11,10 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ContributorsTest {
+    @BeforeEach
+    void Configure(){
+        Configuration.headless=true;
+    }
     @Test
     void andreiSolntsevShouldContributeTheMost(){
         //open Selenide page
