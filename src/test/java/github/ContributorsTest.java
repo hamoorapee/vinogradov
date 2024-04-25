@@ -22,7 +22,7 @@ public class ContributorsTest {
         //bring mouse over the first icon of contributors
         $(".Layout-sidebar").$(byText("Contributors"))
                 .ancestor(".BorderGrid-cell").$$("ul li").first().hover();
-        //check: popup is showing Andres Solntsev
+        //check: popup is showing Andrei Solntsev
         $(".Popover").shouldHave(text("Andrei Solntsev"));
     }
 }
